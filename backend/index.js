@@ -58,7 +58,7 @@ async function run() {
             const user = await userCollection.find({ email: email }).toArray();
             res.send(user);
         })
-        app.get('/post', async (req, res) => {
+        app.post('/post', async (req, res) => {
             const post = (await postCollection.find().toArray()).reverse();
             res.send(post);
         })
