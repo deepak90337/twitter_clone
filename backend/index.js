@@ -1,13 +1,16 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const cors = require('cors');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
+dotenv.config();
+
 const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
-const uri = `mongodb+srv://vishwakarmadeepak59510:deepak90337@cluster0.q3oscss.mongodb.net/Twitter?retryWrites=true&w=majority`;
+const uri = process.env.CONNSTR;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function run() {
