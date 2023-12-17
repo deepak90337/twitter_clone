@@ -40,7 +40,7 @@ function Post({ p }) {
     const loggedInUser = { username: user.email }; // Replace with actual username
   
     try {
-      const response = await fetch(`http://localhost:5000/showuser/${userId}`, {
+      const response = await fetch(`https://btwitter.vercel.app/showuser/${userId}`, {
         method: 'POST', // Change to POST
         headers: {
           'Content-Type': 'application/json',

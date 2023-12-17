@@ -52,7 +52,7 @@ function PrivacySetting() {
   const handlePrivacy = async (e) => {
     e.preventDefault();
   try {
-    const response = await axios.post(`http://localhost:5000/privacySetting/${userId}`, userData);
+    const response = await axios.post(`https://btwitter.vercel.app/privacySetting/${userId}`, userData);
     if (response.status === 200) {
       console.log('Privacy settings updated successfully');
     } else {

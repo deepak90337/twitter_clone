@@ -43,7 +43,7 @@ function TweetBox() {
         e.preventDefault();
 
         if (user?.providerData[0]?.providerId === 'password') {
-            fetch(`http://localhost:5000/loggedInUser?email=${email}`)
+            fetch(`https://btwitter.vercel.app/loggedInUser?email=${email}`)
                 .then(res => res.json())
                 .then(data => {
                     setName(data[0]?.name)
@@ -67,7 +67,7 @@ function TweetBox() {
             console.log(userPost);
             setPost('')
             setImageURL('')
-            fetch('http://localhost:5000/post', {
+            fetch('https://btwitter.vercel.app/post', {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'

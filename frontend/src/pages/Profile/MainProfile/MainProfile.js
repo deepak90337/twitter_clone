@@ -21,7 +21,7 @@ const MainProfile = ({ user }) => {
   const username = user?.email?.split('@')[0];
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/userpost?email=${user?.email}`)
+    fetch(`https://btwitter.vercel.app/userpost?email=${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setPosts(data);

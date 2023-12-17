@@ -6,7 +6,7 @@ function DeletePost() {
 
 const deleteFlaggedPost = async (postId) => {
   try {
-    const response = await axios.delete(`http://localhost:5000/deleteOffensivePost`);
+    const response = await axios.delete(`https://btwitter.vercel.app/deleteOffensivePost`);
     if (response.status === 200) {
       console.log('Post deleted successfully');
       alert("All offensive posts are deleted");
