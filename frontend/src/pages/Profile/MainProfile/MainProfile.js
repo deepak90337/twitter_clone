@@ -47,7 +47,7 @@ const MainProfile = ({ user }) => {
         setIsLoading(false)
 
         if (url) {
-          fetch(`http://localhost:5000/userUpdates/${user?.email}`, {
+          fetch(`https://btwitter.vercel.app/userUpdates/${user?.email}`, {
             method: "PATCH",
             headers: {
               'content-type': 'application/json'
